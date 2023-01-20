@@ -1,0 +1,56 @@
+
+0! = 1
+1! = 0! * 1 = 1
+2! = 2 * 1 = 2 * 1!
+3! = 3 * 2 * 1 = 3 * 2!
+4! = 4 * 3 * 2 * 1 = 4 * 3!
+n! = n * (n-1)! - basically this is the formula we can use
+
+The next couple of algorithms we'll look at can be written recursively and they're often written recursively,
+Recursion
+A method is a recursive method when it calls itself, so we're gonna take a look at calculating the factorial for a number.
+As a reminder to calculate the factorial, you start with the number and then you multiply it by number minus one
+and then you multiply the result by number minus two and you multiply that result by number minus three et cetera
+until you hit zero and then you stop.
+So, three factorial would be three times two times one which equals six. 100 factorial would 100 times 99 times 98 times 97, all the way down to times 1
+Now, how about zero factorial? Well, by definition that's equal to one.
+negative numbers - the factorials for negative numbers are undefined.
+factorial algorithm - the steps for calculating the factorial.
+1.We start out by saying if num is equal to zero, so if we're taking num factorial, if num is equal to zero,
+then the factorial is one and we stop, we have the result.
+2.Otherwise we set the multiplier to 1
+3.we set the factorial to 1
+4.then while the multiplier is not equal to num, do step 5 and 6
+5.We multiply factorial by multiplier and we assign the result to factorial
+6.and then we add 1 to multiplier
+and so, we'll say one times one,  add one to multiplier, so multiplier will become two, so we'll have one times one times two
+and then we'll assign two to factorial and then we'll multiply that by three and so, we'll assign six to factorial,
+we'll multiply that by four, assign 24 to factorial et cetera and we keep going until multiplier is equal to num at which point we stop.
+we basically have a rinse-and-repeat step which is step number four. Step number four says that while the multiplier
+is not equal to num, do steps 5 to 6.
+
+ recursive implementation?
+ instead of using the loop, we can have the method call itself two factorial is one factorial times two, three factorial is two factorial times three,
+ four factorial is three factorial times four.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

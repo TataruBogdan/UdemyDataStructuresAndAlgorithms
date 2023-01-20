@@ -1,0 +1,20 @@
+
+
+two common strategies for handling collisions:
+
+1. open addressing - if we try to put an employee into the table
+                     and we find out that there's already an employee
+                     at the slot where we wanna put the new employee,
+                     then we look for another position in the array.
+                     is if we try to put an employee into the table
+                     and we find out that there's already an employee
+                     at the slot,  position five is full,
+                     so let's look for another position in the array.
+  going to use what's called linear probing. -  each time we increment the index we're doing it in a linear fashion, and every increment of the index is called a probe.
+                  when we discover that a position
+                  for a hash key value is already occupied,
+                  we increment the hashed value by one,
+                  and then we check the resulting index.
+                  And if that's already occupied, we'll increment to seven,
+                  and we'll keep doing that until we find an empty slot,
+                  or we've check the entire hashtable.

@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="UdemyDataStructuresAndAlgorithms">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Hashtables-Hashtables-Challenge-#2-Source-Code.zip!/" />
+      <root url="jar://$PROJECT_DIR$/Lists-Linked-Lists-Challenge-#1-Source-Code.zip!/" />
+      <root url="jar://$PROJECT_DIR$/Hashtables-Hashtables-Challenge-#1-Source-Code.zip!/" />
+      <root url="jar://$PROJECT_DIR$/Lists-Linked-Lists-Challenge-#2-Source-Code.zip!/" />
+      <root url="jar://$PROJECT_DIR$/Lists-Stacks-Challenge-Source-Code.zip!/" />
+      <root url="jar://$PROJECT_DIR$/Sort-Algorithms-Sort-Algorithms-Challenge-#1-Source-Code.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

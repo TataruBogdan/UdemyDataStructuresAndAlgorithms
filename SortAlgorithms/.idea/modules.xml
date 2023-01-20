@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/BubbleSort/BubbleSort.iml" filepath="$PROJECT_DIR$/BubbleSort/BubbleSort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BucketSort/BucketSort.iml" filepath="$PROJECT_DIR$/BucketSort/BucketSort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CountingSort/CountingSort.iml" filepath="$PROJECT_DIR$/CountingSort/CountingSort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FactorialAlgorithm/FactorialAlgorithm.iml" filepath="$PROJECT_DIR$/FactorialAlgorithm/FactorialAlgorithm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/InsertionSort/InsertionSort.iml" filepath="$PROJECT_DIR$/InsertionSort/InsertionSort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MergeSort/MergeSort.iml" filepath="$PROJECT_DIR$/MergeSort/MergeSort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/QuickSort/QuickSort.iml" filepath="$PROJECT_DIR$/QuickSort/QuickSort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RadixSort/RadixSort.iml" filepath="$PROJECT_DIR$/RadixSort/RadixSort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Recursion/Recursion.iml" filepath="$PROJECT_DIR$/Recursion/Recursion.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SelectionSort/SelectionSort.iml" filepath="$PROJECT_DIR$/SelectionSort/SelectionSort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ShellSort/ShellSort.iml" filepath="$PROJECT_DIR$/ShellSort/ShellSort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sort-Algorithms-Sort-Algorithms-Challenge-#1-Source-Code/Sort-Algorithms-Sort-Algorithms-Challenge-#1-Source-Code.iml" filepath="$PROJECT_DIR$/Sort-Algorithms-Sort-Algorithms-Challenge-#1-Source-Code/Sort-Algorithms-Sort-Algorithms-Challenge-#1-Source-Code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sort-Algorithms-Sort-Algorithms-Challenge-#2-Source-Code/Sort-Algorithms-Sort-Algorithms-Challenge-#2-Source-Code.iml" filepath="$PROJECT_DIR$/Sort-Algorithms-Sort-Algorithms-Challenge-#2-Source-Code/Sort-Algorithms-Sort-Algorithms-Challenge-#2-Source-Code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sort-Algorithms-Sort-Algorithms-Challenge-#3-Source-Code/Sort-Algorithms-Sort-Algorithms-Challenge-#3-Source-Code.iml" filepath="$PROJECT_DIR$/Sort-Algorithms-Sort-Algorithms-Challenge-#3-Source-Code/Sort-Algorithms-Sort-Algorithms-Challenge-#3-Source-Code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/SortAlgorithms.iml" filepath="$PROJECT_DIR$/.idea/SortAlgorithms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Test/Test.iml" filepath="$PROJECT_DIR$/Test/Test.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ArrayListReview/ArrayListReview.iml" filepath="$PROJECT_DIR$/ArrayListReview/ArrayListReview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ArraysReviwe/ArraysReviwe.iml" filepath="$PROJECT_DIR$/ArraysReviwe/ArraysReviwe.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SearchAlgorithms/BinarySearch/BinarySearch.iml" filepath="$PROJECT_DIR$/SearchAlgorithms/BinarySearch/BinarySearch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BinarySearchTrees/BinarySearchTrees.iml" filepath="$PROJECT_DIR$/BinarySearchTrees/BinarySearchTrees.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SortAlgorithms/BubbleSort/BubbleSort.iml" filepath="$PROJECT_DIR$/SortAlgorithms/BubbleSort/BubbleSort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SortAlgorithms/BucketSort/BucketSort.iml" filepath="$PROJECT_DIR$/SortAlgorithms/BucketSort/BucketSort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SortAlgorithms/CountingSort/CountingSort.iml" filepath="$PROJECT_DIR$/SortAlgorithms/CountingSort/CountingSort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SortAlgorithms/FactorialAlgorithm/FactorialAlgorithm.iml" filepath="$PROJECT_DIR$/SortAlgorithms/FactorialAlgorithm/FactorialAlgorithm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Hashtable/Hashtable.iml" filepath="$PROJECT_DIR$/Hashtable/Hashtable.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HashtableChaining/HashtableChaining.iml" filepath="$PROJECT_DIR$/HashtableChaining/HashtableChaining.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HashtableJDK/HashtableJDK.iml" filepath="$PROJECT_DIR$/HashtableJDK/HashtableJDK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Hashtables-Hashtables-Challenge-#1-Source-Code/Hashtables-Hashtables-Challenge-#1-Source-Code.iml" filepath="$PROJECT_DIR$/Hashtables-Hashtables-Challenge-#1-Source-Code/Hashtables-Hashtables-Challenge-#1-Source-Code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Hashtables-Hashtables-Challenge-#2-Source-Code/Hashtables-Hashtables-Challenge-#2-Source-Code.iml" filepath="$PROJECT_DIR$/Hashtables-Hashtables-Challenge-#2-Source-Code/Hashtables-Hashtables-Challenge-#2-Source-Code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SortAlgorithms/InsertionSort/InsertionSort.iml" filepath="$PROJECT_DIR$/SortAlgorithms/InsertionSort/InsertionSort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JDKLinkedList/JDKLinkedList.iml" filepath="$PROJECT_DIR$/JDKLinkedList/JDKLinkedList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SearchAlgorithms/LinearSearch/LinearSearch.iml" filepath="$PROJECT_DIR$/SearchAlgorithms/LinearSearch/LinearSearch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lists-Linked-Lists-Challenge-#1-Source-Code/Lists-Linked-Lists-Challenge-#1-Source-Code.iml" filepath="$PROJECT_DIR$/Lists-Linked-Lists-Challenge-#1-Source-Code/Lists-Linked-Lists-Challenge-#1-Source-Code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lists-Linked-Lists-Challenge-#2-Source-Code/Lists-Linked-Lists-Challenge-#2-Source-Code.iml" filepath="$PROJECT_DIR$/Lists-Linked-Lists-Challenge-#2-Source-Code/Lists-Linked-Lists-Challenge-#2-Source-Code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lists-Stacks-Challenge-Source-Code/Lists-Stacks-Challenge-Source-Code.iml" filepath="$PROJECT_DIR$/Lists-Stacks-Challenge-Source-Code/Lists-Stacks-Challenge-Source-Code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MaxHeap/MaxHeap.iml" filepath="$PROJECT_DIR$/MaxHeap/MaxHeap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SortAlgorithms/MergeSort/MergeSort.iml" filepath="$PROJECT_DIR$/SortAlgorithms/MergeSort/MergeSort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NewDoublyLinkedList/NewDoublyLinkedList.iml" filepath="$PROJECT_DIR$/NewDoublyLinkedList/NewDoublyLinkedList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NewLinkedList/NewLinkedList.iml" filepath="$PROJECT_DIR$/NewLinkedList/NewLinkedList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PriorityQueue/PriorityQueue.iml" filepath="$PROJECT_DIR$/PriorityQueue/PriorityQueue.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Queues/Queues.iml" filepath="$PROJECT_DIR$/Queues/Queues.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SortAlgorithms/QuickSort/QuickSort.iml" filepath="$PROJECT_DIR$/SortAlgorithms/QuickSort/QuickSort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SortAlgorithms/RadixSort/RadixSort.iml" filepath="$PROJECT_DIR$/SortAlgorithms/RadixSort/RadixSort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RecapAlgoritm/RecapAlgoritm.iml" filepath="$PROJECT_DIR$/RecapAlgoritm/RecapAlgoritm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SortAlgorithms/Recursion/Recursion.iml" filepath="$PROJECT_DIR$/SortAlgorithms/Recursion/Recursion.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SortAlgorithms/SelectionSort/SelectionSort.iml" filepath="$PROJECT_DIR$/SortAlgorithms/SelectionSort/SelectionSort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SortAlgorithms/ShellSort/ShellSort.iml" filepath="$PROJECT_DIR$/SortAlgorithms/ShellSort/ShellSort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SinglyLinkedList/SinglyLinkedList.iml" filepath="$PROJECT_DIR$/SinglyLinkedList/SinglyLinkedList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SortAlgorithms/Sort-Algorithms-Sort-Algorithms-Challenge-#1-Source-Code/Sort-Algorithms-Sort-Algorithms-Challenge-#1-Source-Code.iml" filepath="$PROJECT_DIR$/SortAlgorithms/Sort-Algorithms-Sort-Algorithms-Challenge-#1-Source-Code/Sort-Algorithms-Sort-Algorithms-Challenge-#1-Source-Code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SortAlgorithms/Sort-Algorithms-Sort-Algorithms-Challenge-#2-Source-Code/Sort-Algorithms-Sort-Algorithms-Challenge-#2-Source-Code.iml" filepath="$PROJECT_DIR$/SortAlgorithms/Sort-Algorithms-Sort-Algorithms-Challenge-#2-Source-Code/Sort-Algorithms-Sort-Algorithms-Challenge-#2-Source-Code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SortAlgorithms/Sort-Algorithms-Sort-Algorithms-Challenge-#3-Source-Code/Sort-Algorithms-Sort-Algorithms-Challenge-#3-Source-Code.iml" filepath="$PROJECT_DIR$/SortAlgorithms/Sort-Algorithms-Sort-Algorithms-Challenge-#3-Source-Code/Sort-Algorithms-Sort-Algorithms-Challenge-#3-Source-Code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Stacks/Stacks.iml" filepath="$PROJECT_DIR$/Stacks/Stacks.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SortAlgorithms/Test/Test.iml" filepath="$PROJECT_DIR$/SortAlgorithms/Test/Test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/UdemyDataStructuresAndAlgorithms.iml" filepath="$PROJECT_DIR$/.idea/UdemyDataStructuresAndAlgorithms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UpdateArrayQueues/UpdateArrayQueues.iml" filepath="$PROJECT_DIR$/UpdateArrayQueues/UpdateArrayQueues.iml" />
+      <module fileurl="file://$PROJECT_DIR$/VectorReview/VectorReview.iml" filepath="$PROJECT_DIR$/VectorReview/VectorReview.iml" />
+    </modules>
+  </component>
+</project>

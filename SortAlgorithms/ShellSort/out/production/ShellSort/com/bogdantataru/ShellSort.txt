@@ -1,0 +1,100 @@
+ I said that insertion sort is a quadratic algorithm and it is, but if the sequence of values that we're sorting is nearly sorted,
+ then insertion sort runs in almost linear time and it does that because it doesn't have to do as much shifting.
+ Think about it. If the most of the values are already sorted, then only a few values will actually have to be inserted
+ into the sorted partition and the amount of shifting will be reduced.
+ Now a computer scientist named Donald Shell realised that if we could cut down on the amount of shifting
+ that insertion sort would run a lot faster and so he came up with something that's known as the Shell sort algorithm
+So how does Shell sort work?
+Well, it's a variation of insertion sort and what it does is insertion sort chooses which element to insert using a gap value of one.
+So every time insertion sort runs, it picks off the first unsorted value and then it compares that value to its neighbour
+and it keeps shifting the neighbours to the right until it finds the correct insertion point for the element that it's inserting.
+Shell sort starts out using a larger gap value, so instead of comparing elements to their neighbours,
+it compares elements that are farther apart from each other in the array. And then as the algorithm runs, it reduces the gap that it's using.
+And the goal is to reduce the amount of shifting that's required.
+So as I said, as the algorithm progresses, the gap value is reduced. So Shell sort traverses the array with a certain gap value
+and after it's done its first traversal with the initial gap value, it decreases the gap and it does it again
+and it does this and this is very important, it keeps reducing the gap value until the gap value is one.
+Now when the gap value is one, we're essentially doing an insertion sort. So the last iteration of the gap value
+will actually perform an insertion sort. But at that point, the array will be more sorted than it was at the beginning.
+And so essentially what Shell sort does is it does some preliminary work using gap values that are greater than one
+and that preliminary work puts the elements in the array and perhaps closer to their sorted positions and then at the very last iteration
+when the gap value becomes one, it does an insertion sort. But that final insertion sort will be working with values
+that have had some preliminary sorting done on them. And because of that, there will be a lot less shifting required.
+So one question is well, what do we use for the gap value? How do we figure out what to start with and how to reduce it?
+see : https://en.wikipedia.org/wiki/Shellsort
+The important thing to note is that the way that you calculate the gap can influence the time complexity.
+And so here we have a time complexity column and depending on what gap we're using, the time complexity is different.
+And so the gap value you choose can influence how many steps the algorithm requires so keep that in mind.
+One really common sequence that's used for the gap value and the gap is also called the interval is the Knuth sequence.
+Knuth sequence - using 3 k minus one over two. -(3 k - 1)/2
+k- the initial value that we want to use is based on the length of the array. What we want is we want to use the value of k
+that's going to calculate to a value that's as close as possible to the length of the array without going over.
+And so if we had an array of let's say 20 elements, we would wanna start with k equal to three.
+If we were to start with k equals four, the gap would be 40 and that's greater than the length of the array so that won't work.
+And so when you want to use this sequence, you want to start with the value of k that's going to result in a gap value
+that is as close to the array's length as possible without going over.
+
+7    35   -15   20   55  1  -22
+
+So what we're going to do is we're going to base our gap on the array's length and we're going to initialise the gap
+to array.length / two. And then on each iteration, we're going to divide the gap value by two until we hit one.
+Now our array only has seven elements in it and so the first gap value is going to be seven over two
+which is three and then the second gap value will be three over two which is one so we're actually only gonna have two iterations
+for this array. So on the first iteration, we'll use a gap value of three. And then on the final iteration,
+and this is always true for Shell sort, the gap value will be one. And at that point, we'll be doing an insertion sort.
+But because we've done a previous iteration and we've moved some of the elements around, some of the elements will be closer
+to their sorted positions.
+So let's go through this.
+So we're gonna start with a gap value of three because we're gonna use array.length over two. We're gonna initialise i to the gap and j to i.
+And as we did before with insertion sort, we're gonna save the value that we want to work with into newElement.
+And then what we do is we compare the element at index j - gap so that will be three minus three is zero with newElement.
+So our gap is three and we're starting with element three so we basically wanna compare it.
+Because the gap is three, we wanna compare it to the element that's three positions away and so we compare seven with 20.
+Seven is less than 20 and so what we're going to do is we're going to assign 20 to where 7 was.
+So instead of doing what we were doing with insertion sort, which is we're comparing to the neighbours and shifting up one,
+we're comparing using a gap of 3 and we shift by 3  and so 20 has been shifted up three places.
+And then we're going to set j to j minus gap which is zero and we've hit the front of the array at this point
+and so what we're going to do is assign newElement to position zero.
+So what we've basically done is we're kind of doing an insertion sort but we're using a gap of three.
+So what we're gonna want to do next now is move i to four and j becomes i which is four, the newElement is 55 and we're gonna compare 55 to 35
+because that's three elements away. 55 is greater than 35 so we don't do anything. Everything remains as it is.
+And now i will be 5, j will be 5, we're going to compare 1 to minus 15 'cause minus 15 is three elements away.
+Okay, so there's nothing to do because 1 is greater than minus 15. And so now we're gonna move to minus 22
+and we're going to assign that to newElement and we're gonna compare it to the element that's three positions away from it
+and minus 22 is less than 20 so we're going to assign 20 to position six.
+Now at this point, we're gonna subtract the gap from j and then we're going to compare minus 22 against what's at position zero
+because we wanna go three elements away again. Minus 22 is less than seven so we're going to shift seven into position three.
+And at this point, we've hit the front of the array. There are no more elements to compare minus 22 against and so we assign minus 22 to position zero.
+And at that this point, we've hit the end of the array and so we have finished our first iteration with gap equal to 3.
+Now notice that the array is more sorted now than it was before and we've moved minus 22 all the way to the front of the array
+and we did that with one assignment. And so in insertion sort, pure insertion sort, at some point we would have had to have shifted
+minus 22 down or rather in the implementation I showed you every single element would have to have been shifted up
+to make room for minus 22. But in this sort of pre-sorting phase, when we're using a gap of three, - 22 is moved very quickly down
+to the front of the array. We've also moved 20 closer to its sorted position. 20 started at the front of the array
+and now it's only two positions away from where it usually ends up in the sorted array.
+So at this point, we're gonna update the gap. We're gonna divide three by two and we'll get one and so at this point, we will actually do an insertion sort
+because the gap is going to be one so we're gonna be comparing everything to its neighbours and when we shift we're gonna be shifting up by one.
+And so at this point, we'll do an insertion sort, but we're doing an insertion sort on an array that has had some preliminary work done on it
+and so there's gonna be a lot less shifting and that's what Shell sort is all about.
+So Shell sort is an in-place algorithm - We're working within the original array.
+it's really difficult to nail down the time complexity because it's going to depend on the gap. It's gonna depend on the method that you're using
+to choose the gap. In the worse case, it can be quadratic. but it can also perform much better than that.
+It doesn't require as much shifting as insertion sort.
+it's an unstable algorithm.
+You can also improve bubble sort using Shell sort and it would be the same type of idea.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

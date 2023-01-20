@@ -1,0 +1,47 @@
+Recursion
+A method is a recursive method when it calls itself, so we're gonna take a look at calculating the factorial for a number.
+As a reminder to calculate the factorial,
+You start with the number and then you multiply it by number minus one and then you multiply the result by number minus two
+and you multiply that result by number minus three et cetera until you hit zero and then you stop.
+So, three factorial would be 3 times 2 times 1 which equals six. 100 factorial would 100 times 99 times 98 times 97, all the way down to times 1
+Now, how about zero factorial? Well, by definition that's equal to one. So, zero factorial is one.
+If you're wondering about negative numbers, the factorials for negative numbers are undefined.
+So, I have on the screen the factorial algorithm, the steps for calculating the factorial.
+Factorial Algorithm
+We start out by saying
+if num is equal to 0, then the factorial is 1. and we stop, we have the result.
+Otherwise
+we set the multiplier to 1
+and we set the factorial to one
+while the multiplier is not equal to num, we do steps 5 and 6.
+We multiply factorial by multiplier and we assign the result to factorial
+and then we add 1 to multiplier
+we'll say one times one, add one to multiplier, so multiplier will become two, so we'll have 1 times 1 times 2 and then we'll assign 2 to factorial
+and then we'll multiply that by 3 and so, we'll assign 6 to factorial, we'll multiply that by 4, assign 24 to factorial et cetera
+and we keep going until multiplier is equal to num at which point we stop.
+So, in this algorithm, we basically have a rinse-and-repeat step which is step number four.
+Step number four says that while the multiplier is not equal to num, do steps 5 to 6.
+
+ function that calculates the factorial in an iterative way.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

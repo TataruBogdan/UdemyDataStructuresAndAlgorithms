@@ -1,0 +1,173 @@
+
+We're going to implement a max heap meaning that the values of the parents
+are always greater than or equal to their children.
+Heaps are usually implemented as arrays
+and I'm going to need a class for the heap,
+And we're going to need two fields in our heap class,
+the array and the next available position
+so that when we insert an item,
+we can just go straight to that index
+and insert the newValue.
+and then in our constructor, we just need
+to create and initialise the array
+ we'll let the caller tell us
+how big they want the heap to be..
+1. So, one of the things we're gonna need to do
+    when we insert a node is check to see
+    whether the heap is full
+    and the heap is full when the size equals the length
+    of the array and so, we're gonna create an isFull method,
+    if the number of items we have in the heap
+    is equal to the size of the array,
+    then the heap is full.
+    If the heap is full, there are two approaches.
+    We can throw an exception and say sorry, the heap is full
+    or we could resize the array.
+2. let's add a utility method for getting the parent for an element in the array,
+    we're gonna need the index of the element
+    in the array that we wanna get the parent for
+    and we're just gonna return that expression
+    that we looked at, so we're gonna say return index
+    don't need to use floor because we're using integers
+    and when you do division with integers, it will be rounded down automatically.
+3. when we insert a node, we always put it at the end of the array,
+   that's why we're tracing the size
+   so that we know where the next available position will be
+   we're going to just throw an exception
+   if the heap is full. We're not gonna bother resizing the array,
+   throw new and we're just gonna throw an IndexOutOfBoundsException,
+   put the new item at the first available spot, so we're gonna say heap size++ equals value.
+4. now we have to potentially heapify or fix the heap because the value we inserted
+   might be greater than its parent. max heap,
+   so we're going to check whether it is greater than its parent and if it is,
+   we're gonna swap it with its parent and then we're gonna rinse and repeat until the value isn't greater than its parent
+   or we hit the root and so, the value has become the root and at the point, the heap will be fixed.
+   All of the nodes in the heap will be smaller than their parents.
+5. fixHeapAbove - because you're gonna see later when we do delete that we have look down the heap to fix it and so
+   when we're heapifying after an insert, we're looking up the tree
+   'cause we're starting with the value and then we're gonna be comparing it
+   to its parents and so, we're travelling up the tree to heapify it
+   and we want the index of the value that we've just inserted, so that's where we wanna start.
+   while index is greater than zero because if index hits zero, we've hit the root,
+   it means the newValue is the root.
+   if we haven't hit the root, then we're gonna compare the new value against the value of its parent
+   if the newValue has a greater value than its parent, then we wanna swap the two values
+   this is assigning the parent to where the newValue currently lives
+   and then we're gonna say index equals getParent index.
+   in slides I showed them swapping at each step and that's conceptually what we're doing
+   but in the implementation, we're comparing the value against its parent and if it's greater than its parent,
+   we assign the parent down, we don't actually assign the value into that node
+   because we're gonna compare it against the parent of that node and it might have to be swapped down.
+   So, we only actually assign newValue when we have found its correct position,
+   so what we're doing is we're bubbling it up and we're shifting parents down,
+   any parents that are less than the newValue are shifting down and at the end,
+   there'll be the space where the newValue is supposed to go and that's when we'll assign it
+   and so, we're gonna assign it when we drop out of the loop.
+6. delete -
+    we always use the same replacement node and that node is the rightmost value in the heap
+    and so it's the rightmost leaf in the tree and the reason we do that is because we want the tree
+    to remain complete.
+    so if we're gonna delete a node from somewhere in a tree and we want to replace that node,
+    if we take the rightmost leaf from the last level of the tree and we take that node and we delete it
+    and we use it as the replacement node, after we've done that, the tree will still be complete
+    6.1 If we're gonna look down the heap, so we need to fix down the heap,
+        we're gonna swap the replacement value with the larger of its two children and the reason we do that
+        is if we swap it with the larger of its two children, so the larger child will become the parent
+        of the replacement value and its old sibling, then we know for sure at that point,
+        that that larger child is larger than both the replacement value and its old sibling
+        and so the heap property is preserved.
+        If we were to swap the replacement value with the smaller value of its two children,
+        then obviously when that smaller value became the new root, it would be smaller than the replacement value
+        and its old sibling so we'd still have a problem.
+        ** the replacement value is always the same and because we usually are backing a heap with an array
+        basically the replacement value is always at position size minus one.
+        If size is the next available position in the array, then the last index for the heap is index size minus one
+7. gonna need a delete method and a fixHeapBelow method for when we look down the tree
+   when we're doing our heapify process. We're also going to need methods for isEmpty
+   and for getting the child indices for an element in the array.
+   7.1 public boolean isEmpty,and basically, the heap is empty if the size equals zero,
+   7.2 public int getChild, and we want the index of the parent, so the element that we want to get a child for,
+       and we also need to know whether we want to get the left or right child,
+       so I'll say boolean left, and if left is true, we want the left child. If it's false, we want the right child.
+8. public int delete. We're gonna return the value that we deleted,
+   and we're gonna want an integer, and we're gonna take the index, not the value.
+   Now, why are we taking the index? Well, if we take the value,
+   then we're gonna have to search the heap for the index of the value,
+   and we can do that, of course,  but we'd have to use a linear search.
+   We can't use a binary search because you can only do a binary search on a sorted array,
+   and we can't sort the array 'cause that would obviously blow away our heap structure.
+   8.1 the first thing we wanna do is get the parent, so int parent equals
+       getParent index, and so, this will be the parent of the deleted item,
+       and then, we wanna save the deleted value off 'cause we're gonna return that at the end of the method,
+   we've got the parent of the value we wanna delete.
+   we're going to replace heap index with the value that's at the right-most position in the array,
+   and the index for that will be size minus one  because remember that size always contains
+   the next available position,
+   8.2 we're gonna wanna look up or down the heap, depending on what the situation is.
+   If the value at heap index is now greater than its parent, we need to fix the heap above.
+   If the value at heap index is less than its parent, then we need to look at the heap below
+   because it's possible that it's also less than one of its children,
+9. fixHeapBelow method -
+   and we're gonna take the index of the start position, and that will be the index of the item that we deleted,
+   so where we put the replacement value, and then, we're gonna accept this lastHeapIndex parameter.
+   Now we don't need this for delete, but when we implement the heapsort algorithm,
+   we're going to need this, and this basically says this is the last index of the heap.
+   So in our array, right now, the heap goes from position zero to position size minus one,
+   and so, we're gonna pass size minus one as lastHeapIndex. So this essentially tells us the last position
+   of the heap in the array.
+   9.1 declare a field called childToSwap,
+   So we're going to compare the node at index with its two children,
+   and we're going to swap it, if necessary. If the value at heap index is less than
+   either of its children, we're going to swap it with the child
+   that has the greatest value as we saw on the slides.
+   So we're gonna say while index is less than or equal to lastHeapIndex,
+   and so, we're going to, we're fixing below, and so, we're starting at index,
+   and we're going to the end of the heap. We're not looking at indices that are lower than index
+   because those are nodes that are sitting above index,
+        we're gonna say int leftChild equals getChild index, true.
+        We pass true when we want the index of the left child, true and int rightChild equals getChild index, false,
+        we're going to make sure that these indices are valid
+        because remember, if the node doesn't have a right child, or doesn't have a left child,
+        then these calculations will actually give us indices
+        that are size n beyond. So they'll return indices that aren't part of the heap,
+        and we know the last valid heap index is lastHeapIndex.
+   if leftChild is less than or equal to lastHeapIndex, that means that this node has a left child,
+   and so, now we're gonna test whether it has a right child, if rightChild is greater than the lastHeapIndex,
+   then it does not have a right child.
+   essentially saying that we calculated an index for the right child that's outside the bounds of the heap,
+   Now if this condition fails, it means that we also have a right child,
+   and so, in that case, we need to swap it with the child that has the largest value,
+   so we're gonna say childToSwap equals and we're gonna say heap leftChild
+   is greater than heap rightChild, then we wanna swap it with the leftChild.
+   Otherwise, we wanna swap with the rightChild, and so, here, we're assigning childToSwap
+   with the index of the child that has the greatest value.
+   So we've assigned childToSwap, but that doesn't mean we actually wanna swap the child
+   because we now need to compare the value at heap index with the childToSwap value.
+   If the value at heap index is greater than the childToSwap value, then we're done.
+   I mean, the parent is greater than the child. We only need to swap if the value at index
+   is less than the child,  if heap index is less than heap
+   of the child that we're gonna potentially swap with, then we do the swap.
+   if the replacement value is greater than or equal to the child, our heap is good,
+   so we've finished heapifying the heap,  and so, in that case,
+   we wanna break out of the loop because we're done,
+   and then, we're gonna wanna rinse and repeat.
+   So now we wanna compare the replacement value with its new children,
+   and the replacement value is now sitting at index childToSwap because we just swapped it,
+   and we know we just swapped it because if we haven't done any swapping,
+   we're gonna break out of the loop,
+if the element in that position doesn't have any children - break,
+10. finish our delete method,
+    if index equals zero, meaning we're dealing with the root, or heap index is less than
+    heap parent, then we wanna fix the heap below,
+    if the node we deleted was the root, and so, the replacement value has gone into the root,
+    then obviously, we can only look down the tree, and if the value, the replacement value,
+    is less than its parent, that means we don't have to look up the tree
+    because we know this guy is then gonna be less than everything above the tree,
+    and so, in this case, we need to look at the tree below heap index
+    so we've fixed our heap, we need to decrement the size,
+    and then, of course, we're gonna return our deletedValue
+
+
+
+
+

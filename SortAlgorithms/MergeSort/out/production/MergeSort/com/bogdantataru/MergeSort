@@ -1,0 +1,88 @@
+
+NOT an in-pace algorithn
+
+O(nlogn) - base2 - We're repeatedly dividing the array in half during the splitting phase
+
+Stable algorithm
+
+Now, merge sort is a divide and conquer algorithm because it involves splitting the array you wanna sort
+into a bunch of smaller arrays, and it's usually implemented using recursion.
+Merge sort involves two major phases.
+
+The first phase is the splitting phase, and second phase is the merging phase.
+We do the sorting during the merging phase. The splitting phase is a preparation phase
+to make sorting faster during the merging phase. Now, I wanna make it clear that the splitting is logical.
+We don't create new arrays when we do the splitting. We use indices to keep track of where the array has been split.
+So when during the splitting phase, we're not actually creating new array instances.
+
+In the splitting phase, we start with the unsorted array, and we divide the array into two arrays,
+and remember, both of the arrays will be unsorted, and we call the first array, the left array
+and second array, the right array, and we generally just divide the array down the middle.
+If you have an odd number of elements, it will depend on the implementation. Some implementation will put the extra element
+into the left array, and some implementations will put the extra element into the right array,
+but the important point is you're dividing the array or splitting the array into two arrays, the left array and the right array,
+and then, once you've done that, you keep splitting down even further. So now you go to the left array,
+and you split that into a left and a right array, and then, you split that left array into a left and a right array, and you keep going,
+splitting all the arrays and the sub-arrays until you split the original array into a bunch of one-element arrays,
+and remember from our discussion of insertion sort, a one-element array is sorted by default
+
+merging phase, you're going to merge every left/right pair into a sorted array.
+So let's say we have an array of four elements  So we're gonna split that into two sub-arrays of length two each,
+and then, we're gonna split those two sub-arrays into two arrays of one element. So from that four-element array,
+we're gonna end up with four one-element sub-arrays.  and then what we do is we take the two one-element arrays
+from the left sub-array, and we merge them back into a two-element array. The merged two-element array will be sorted,
+so when we do the merge, that's the point when we do the sort, and then, we'll take the two elements from the right sub-array,
+and we'll merge them into a two-element sub-array. So now we have, we're back to two arrays, a left and a right array,
+except this time, the left and the right array are sorted, and then, we'll merge the left and right array,
+which are now two elements each, back into a four-element array, and at that point, when we do the merge, we sort,
+so we get a four-element array that's sorted, and we have sorted our array.
+
+Now because of the recursive nature of the implementation, it's important to note that we're going to handle the entire left side
+of the array before we start working with the right side of the array because you'll see from the implementation
+that we call a method to partition the left side, and then, we call a method to partition the right side,
+but that method will call itself recursively, and so, we'll call the method to partition the left side, and then,
+it will call methods to partition itself into left and right, and this one will call a method to partition itself into left and right,
+and so, once we start down this path, we go down the recursive rabbit hole, and so, by the time the method called to partition
+the left returns, we'll have done all this work, and the same goes for the right side.
+
+merging step now, and you'll see that when we do the merging step, we merge backwards, so we merge bottom up,
+and we're gonna merge sibling arrays, so we'll start by merging 35 with minus 15 and then seven with 55 an then one with minus 22,
+and only after we've merged 35 and minus 15 back into a two-element sorted array will we then merge 20 with the result, et cetera.
+We always merge sibling left and right, and each merged array will be sorted,
+
+merging works  is we merge sibling left and right arrays, and what we do is we create a temporary array large enough
+to hold all the elements in the arrays we're merging. So on the first round, our temporary arrays will be of length two
+because we're going to be merging two one-element arrays, and what we do is we set i to the first index of the left array,
+and j to the first index of the right array, and when I say left and right array, I mean the two arrays we're merging,
+and then, we compare the value at the i position in left to the value at the j position in the right array,
+and if the value in the left array is smaller, we copy that to the temporary array, and we increment i by one.
+If the value on the right array is smaller, then we copy that to the temporary array and increment j by one.
+So essentially, what we're doing is we're stepping through the left and right arrays, and we're taking the smallest value
+between the left and the right and copying it into the temporary array, and if we keep doing that, that temporary array
+will contain the values in sorted order. So we're gonna repeat that until all the elements in both arrays have been processed,
+and, as I said, at that point, the temporary array will contain the merged values in sorted order, and then,
+we have one final step to do. Remember, we've been copying these values into a temporary array, so we then have to copy the sorted values
+back into the original input array, the one that we're sorting, at the correct positions, and so, if the left array is at positions x to y
+in the original array, and the right array is at positions y plus one to z, then after the copy, positions x to z
+will be sorted in the original array. So we're gonna overwrite what's there in the original array with the sorted values.
+So we're gonna start by merging the two siblings on the left, 35 and minus 15. So what we'll do is we'll create
+a temporary two-element array. i will be initialised to one because that's the first index in the left array,
+and j will be initialised to two because that's the first index in the right array, and then we compare array i to array j.
+Minus 15 is smaller than 35. and so, we copy minus 15 to the temporary array. Then, we're gonna copy 35 to the temporary array,
+and at this point, the temporary array will be minus 15 and 35, and we've now seen all of the elements in the left array
+and right array that we're merging. So at this point, we wanna copy the temporary array back into positions one
+and two in the original array, and so, at this point, minus 15 and 35 are sorted. Now, they're not in sorted position in the array,
+but the merged array is sorted, and the two sibling arrays have now been merged. So now, we're back to two arrays on the left-hand side.
+We're back to 20, and we're back to minus 15 and 35. So at this point, the left array contains 20,
+and the right array contains minus 15 and 35. So now we're gonna merge those two arrays because 20 and minus 15 and 35
+are sibling arrays now. We originally got those two arrays when we split the left array. So we create a temporary array of length three.
+i will be initialised to zero, and j will be initialised to one, and then, we compare array zero to array one.
+Minus 15 is less than 20, so it's gonna be copied to the temporary array, and because we copied the value from the right array
+into the temporary array, we increment j by one because we've processed minus 15.
+i is still zero because we haven't processed 20 yet.  So now we compare 20 to 35. 20 is smaller than 35, so it gets copied next,
+and now, only 35 remains, and so, it's copied last, and so, the temporary array consists of minus 15, 20 and 35,
+and now, we copy that back into positions zero to two in the original array, and so, at this point, we have completed
+merging the left sub-array,  it's in sorted order.
+
+
+

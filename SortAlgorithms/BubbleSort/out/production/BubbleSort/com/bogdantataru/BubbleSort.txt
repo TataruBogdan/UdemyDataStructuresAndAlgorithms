@@ -1,0 +1,33 @@
+
+sort algorithms - as the BUBBLE algorithm progresses, it partitions the array into a sorted partition
+and an unsorted partition and this is a logical partitioning so
+we don't create completely separate array instances and we don't create an array instance that contains what we've sorted so far
+and another array instance that contains unsorted numbers.
+So when we start the algorithm for this array, we're going to have a field that we're going to call unsorted partition index
+and when we start this will be 6 because the entire array is the unsorted partition when we start out because we haven't sorted anything yet.
+So 6, it will be the last index of the unsorted partition.
+I is at position 0 - we compare the element at index 0 with the element at index 1 and
+ if the element at index 0 is greater than the element at index 1, we swap the elements.
+ If it's less we don't do anything because of course we want to move larger elements towards the end of the array
+ or towards the right because we're sorting in ascending order.
+ So in this case 20 is less than 35 so we don't do any swapping and then what we're going to do is increment I to 1. So now we're going to look at
+ the element at position 1 and compare it with the element at position 2 and in this case 35 is greater than -15, so we swap them.
+So now -15 will be at position 1 and 35 will be at position 2 and we increment I to 2. So now we're going to compare the element at index 2 with the elemented index 3.
+35 is greater than 7 so we swap them  and we increment I to 3. So now we're going to compare the elemented index 3 with the element at index 4.
+35 is less than 55 so we don't do anything we just increment I to 4 and then we compare 55 to 1, that's the element at position 4 with the element at position 5.
+55 is greater than 1 so we swap them and we increment I to 5 and finally we compare 55 to -22 and of course 55 is greater than -22 so we swap them
+and at this point I is equal to the last unsorted partition index so we stop. We have completed the first traversal of the array
+and at the end of that traversal, the last element in the array is in its correct position and so at this point the greatest element in the array
+will be at index array length minus one and for our array length minus one is 6.
+So at this point what we're going to do is we're going to set the unsorted partition index to 5 because we now consider position 6 to be sorted
+and so the logical partition is going to be between the elemented index 5 and the element at index 6.
+Everything from index 5 down to the front of the array is in the unsorted partition and everything at array index 6 and to the right,
+and in this case there isn't anything to the right, everything there is in the sorted partition.
+So on the next traversal, we can see that 55 is now in the sorted partition and we set I back to zero because we want to repeat the process we just did
+and the unsorted partition index is now 5.
+So we start all over again
+
+If the extra memory you're using doesn't increase as the number of items in the array increases,then it's still an in-place algorithm.
+
+Now this algorithm has O to the n square time complexity. It's a quadratic algorithm so that means that it will take 100 steps to sort 10 items,
+10,000 steps to sort 100 items, 1,000,000 steps to sort 1,000 items.

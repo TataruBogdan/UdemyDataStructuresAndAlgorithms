@@ -1,0 +1,33 @@
+
+Insertion Sort.
+its partitions the array into sorted and unsorted partitions. implementation I'm going to show you, grows sorted partition from left to right.
+So it grows a sorted partition from the front of the array.
+
+Well, it starts out by saying that the element position zero is in the sorted partition.
+And because this sorted partition is of length one, by default, the element is sorted. Coz if you have an array of length one, or a partition of length one,
+it's sorted, right? There's only one element. So at the beginning, the elements from position one into the right or in the unsorted partition.
+And so we're going to set a first unsorted index field to one. Now on each iteration, we take the first element in the unsorted partition
+which will be the element at array of first unsorted index, and we insert it into the sorted partition.
+And so at the end of each iteration we will have grown this sorted partition by one. And so what we'll do on the first iteration is we will take 35,
+because that's the first unsorted value. And we will insert it into the sorted partition. And at the end of the iteration, the first two elements in the array will be sorted.
+
+So how is each element inserted?  Well, what we do is we compare the value we're inserting with the values in the sorted partition.
+And we we traverse the sorted partition from right to left, and we look for a value that is less than or equal to the one we're trying to insert
+because once we find that value, we can stop looking we have found the correct insertion position for the new value that we're trying to insert.
+Because remember, when we're inserting the value we are working within the sorted partition. And so if the element at index i in the sorted partition
+is less than or equal to the element we're trying to insert, then all of the values to the left of element i will be less than or equal to the value
+we're trying to insert, because all the values are in sorted order. So as we look for the correct insertion position, we shift values in the sorted partition to the right.
+
+//because when we start out, the element we want to insert is at first inserted index, and we're going to continue to loop,
+//in other words, we're going to continue to look and keep shifting items, as long as i is greater than zero
+//because that means we haven't hit the front of the array and  we'll keep going as long as whatever's at intArray i minus one is greater than newElement.
+//we want to keep looking for the insertion position as long as we haven't hit the front of the array because if we hit the front of the array,
+//it means that the element we're trying to insert is the smallest element we've seen so far and the correct insertion position is zero.
+// And we wanna keep looking as long as the element we're looking at in the sorted partition is greater than the one we're trying to insert,
+// because if the element at i minus one is greater than the element we're trying to insert, then we still haven't found the correct insertion position.
+// So the moment we hit the front of the array, or the moment we hit an element that is less than or equal to the element we're trying to insert,
+//we have found the correct insertion position. And on each iteration, we're going to decrement i because remember we are traversing the sorted partition
+// and doing the comparisons from right to left, and so we're moving down the sorted partition.
+// Okay, so what do want to do if we haven't hit the front of the array and if the element at i minus one is greater than the element we're inserting?
+// Well, if that's the case, we want to shift the element at i minus one to the right, because we need to make room for this new element,
+// so what we're going to do is we're going to assign intArray i with intArray i minus one, and so this is where we're doing the shifting.
